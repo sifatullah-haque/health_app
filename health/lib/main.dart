@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:health/pages/while_login/sign_up/sign_up.dart';
-
+import 'package:health/pages/before%20login/first_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(const MyApp());
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: SignUp(),
+        home: firstPage(),
       ),
     );
   }

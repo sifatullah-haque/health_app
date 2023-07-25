@@ -29,22 +29,15 @@ class button extends StatelessWidget {
           Navigator.pushNamed(context, '/home');
         },
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 80.0),
-              child: Text(
-                text.data.toString(),
-                style: GoogleFonts.inter(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w700,
-                  color: MyColors.white,
-                ),
+            Text(
+              text.data.toString(),
+              style: GoogleFonts.inter(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w700,
+                color: MyColors.white,
               ),
-            ),
-            const Icon(
-              Icons.arrow_forward,
-              color: MyColors.white,
             ),
           ],
         ),

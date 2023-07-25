@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:health/constant/my_color.dart';
+
+import 'package:health/pages/while_login/commonWhileLogin/divider.dart';
 
 import '../../common_elements/button.dart';
+import '../commonWhileLogin/google_Fb_Logo.dart';
+import '../commonWhileLogin/login_signup_converter.dart';
 import 'checkbox_field.dart';
 import 'input_field.dart';
 
@@ -38,70 +40,17 @@ class SignUp extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              Row(children: <Widget>[
-                Expanded(
-                  child: Container(
-                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                      child: const Divider(
-                        color: MyColors.light_grey,
-                        height: 36,
-                      )),
-                ),
-                const Text("OR"),
-                Expanded(
-                  child: Container(
-                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                      child: const Divider(
-                        color: MyColors.light_grey,
-                        height: 36,
-                      )),
-                ),
-              ]),
+              divider(),
               SizedBox(
                 height: 20.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/while_login/google.png",
-                    height: 50.h,
-                    width: 50.w,
-                  ),
-                  SizedBox(
-                    width: 32.w,
-                  ),
-                  Image.asset(
-                    "assets/while_login/fb.png",
-                    height: 50.h,
-                    width: 50.w,
-                  ),
-                ],
-              ),
+              googleFbLogo(),
               SizedBox(
                 height: 20.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account?",
-                    style: GoogleFonts.inter(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: MyColors.Deep_Blue),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Login",
-                      style: GoogleFonts.inter(
-                          fontSize: 12.sp,
-                          color: MyColors.Purple_Plum,
-                          fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ],
+              const LoginSignUpConverter(
+                primaryText: Text("Already have an account?"),
+                buttonText: Text("Login"),
               )
             ],
           ),

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:health/constant/my_color.dart';
-import 'package:health/pages/home_page.dart';
+
+import 'package:health/pages/while_login/sign_up/sign_up.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'first_intro_page.dart';
@@ -87,7 +88,7 @@ class _IntroScreenState extends State<IntroScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => SignUp(),
                               ));
                         } else {
                           _controller.nextPage(
