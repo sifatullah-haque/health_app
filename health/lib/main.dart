@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:health/pages/before%20login/first_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:health/pages/while_login/forgot_password/changes_done.dart';
+import 'package:health/pages/before%20login/first_page.dart';
 import 'package:health/pages/while_login/forgot_password/email_address.dart';
-import 'package:health/pages/while_login/forgot_password/password_address.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: changesDone(),
+        home: firstPage(),
       ),
     );
   }

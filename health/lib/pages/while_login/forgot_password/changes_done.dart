@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:health/constant/my_color.dart';
+import 'package:health/pages/while_login/login.dart/login.dart';
 
 class changesDone extends StatelessWidget {
   const changesDone({super.key});
@@ -52,7 +53,11 @@ class changesDone extends StatelessWidget {
                 onPressed: () {
                   // Navigate to the home page
 
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => Login(),
+                    ),
+                  );
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

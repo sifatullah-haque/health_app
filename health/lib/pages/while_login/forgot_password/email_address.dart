@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:health/constant/my_color.dart';
 import 'package:health/pages/while_login/commonWhileLogin/main_header_text.dart';
+import 'package:health/pages/while_login/forgot_password/password_address.dart';
 
 class EmailAddress extends StatelessWidget {
   const EmailAddress({super.key});
@@ -92,7 +93,9 @@ class EmailAddress extends StatelessWidget {
                   onPressed: () {
                     // Navigate to the home page
 
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => passwordAddress(),
+                    ));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
