@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:health/pages/while_login/commonWhileLogin/main_header_text.dart';
 
 import '../../../constant/my_color.dart';
 
@@ -10,7 +11,8 @@ class inputField extends StatelessWidget {
     super.key,
     required TextEditingController nameController,
     required TextEditingController passwordController,
-  }) : _nameController = nameController, _passwordController = passwordController;
+  })  : _nameController = nameController,
+        _passwordController = passwordController;
 
   final TextEditingController _nameController;
   final TextEditingController _passwordController;
@@ -26,14 +28,8 @@ class inputField extends StatelessWidget {
           padding: const EdgeInsets.only(top: 30.0),
           child: Align(
             alignment: Alignment(0, 0),
-            child: Text(
-              "Create an account",
-              style: GoogleFonts.inter(
-                fontSize: 30.sp,
-                fontWeight: FontWeight.w700,
-                color: MyColors.Deep_Blue,
-              ),
-              textAlign: TextAlign.center,
+            child: mainHeaderText(
+              text: Text("Create An Account"),
             ),
           ),
         ),

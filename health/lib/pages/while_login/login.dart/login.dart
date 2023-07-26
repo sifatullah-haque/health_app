@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:health/constant/my_color.dart';
 import 'package:health/pages/common_elements/button.dart';
 import 'package:health/pages/while_login/commonWhileLogin/divider.dart';
@@ -29,7 +28,13 @@ class Login extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text("Forgot your password?"),
+                    child: Text(
+                      "Forgot your password?",
+                      style: TextStyle(
+                          color: MyColors.Purple_Plum,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12.sp),
+                    ),
                   ),
                 ],
               ),
